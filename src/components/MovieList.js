@@ -2,6 +2,7 @@ import React from 'react';
 
 const MovieList = (props) => {
   const FavoriteComponent = props.favoriteComponent;
+
   return (
     <React.Fragment>
       {props.movies.map((movie, index) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const removeFavorites = () => {
+const RemoveFavorites = () => {
   return(
   <React.Fragment>
     <span className="mr-2">Remove from favorites</span>
@@ -12,4 +12,4 @@ const removeFavorites = () => {
     );
 };
 
-export default removeFavorites;
+export default RemoveFavorites;
