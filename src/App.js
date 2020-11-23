@@ -13,12 +13,13 @@ const App = () => {
   const [favorites, setFavorites] = useState([]);
   const [searchValue, setSearchValue] = useState('');
 
+
   const getMovieRequest = async(searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=c5171cf5`
     const response = await fetch(url);
     const responseJson = await response.json();
 
-    if(responseJson.Search){
+    if(responseJson.Search) {
       setMovies(responseJson.Search);
     }
   };
@@ -30,9 +31,10 @@ const App = () => {
   useEffect(()=> {
     const movieFavorites = JSON.parse(localStorage.getItem('app-favorites')
       );
-    setFavorites(movieFavorites);
 
+    setFavorites(movieFavorites);
   }, []);
+
 
   const saveToLocalStorage = (items) => {
     localStorage.setItem('app-favorites', JSON.stringify(items));
@@ -45,7 +47,8 @@ const App = () => {
   };
 
   const removeFavoriteMovie = (movie) => {
-    const newFavoriteList = favorites.filter((favorite)=> favorite.imdbID !== movie.imdbID
+    const newFavoriteList = favorites.filter(
+      (favorite) => favorite.imdbID !== movie.imdbID
       );
 
 
