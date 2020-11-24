@@ -15,28 +15,27 @@ const App = () => {
 
 
   useEffect(() => {
-    const getMovieRequest = async(searchValue) => {
+    const getMovieRequest = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=c5171cf5`
     const response = await fetch(url);
     const responseJson = await response.json();
 
-    if(responseJson.Search){
+    if(responseJson.Search) {
       setMovies(responseJson.Search);
     }
   };
     getMovieRequest(searchValue);
   }, [searchValue]);
 
-  console.log(searchValue);
 
   useEffect(()=> {
-    try {
-      const movieFavorites = JSON.parse(localStorage.getItem('app-favorites'));
 
+      const movieFavorites = JSON.parse(
+        localStorage.getItem('app-favorites')
+        );
       if (movieFavorites) {
         setFavorites(movieFavorites);
       }
-    }  catch(e) {}
   }, []);
 
 
@@ -71,7 +70,7 @@ const App = () => {
         <MovieList
           movies={movies}
           handleFavoritesClick={addFavoriteMovie}
-          favouriteComponent={AddFavorites}
+          favoriteComponent={AddFavorites}
         />
       </div>
       <div className='row d-flex align-items-center mt-4 mb-4'>
@@ -80,8 +79,8 @@ const App = () => {
       <div className='row'>
         <MovieList
           movies={favorites}
-          handleFavouritesClick={removeFavoriteMovie}
-          favouriteComponent={RemoveFavorites}
+          handleFavoritesClick={removeFavoriteMovie}
+          favoriteComponent={RemoveFavorites}
         />
       </div>
     </div>
