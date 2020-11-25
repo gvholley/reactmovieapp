@@ -4,7 +4,6 @@ import MovieListHeading from './components/MovieListHeading';
 import SearchBox from './components/SearchBox';
 import AddFavorites from './components/AddFavorites';
 import RemoveFavorites from './components/RemoveFavorites';
-import Switch from './components/Switch';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -50,17 +49,6 @@ const App = () => {
     saveToLocalStorage(newFavoriteList);
   };
 
-  const DivSwitch = () => {
-
-    const [ active, setActive ] = useState(false)
-
-
-    return (<div>
-       <button onClick={() => setActive(!active)}> Toggle Me </button>
-       { active ? <AddFavorites /> : <Switch /> }
-    </div>)
-
-}
 
   const removeFavoriteMovie = (movie) => {
     const newFavoriteList = favorites.filter(
@@ -75,7 +63,7 @@ const App = () => {
   return (
     <div className='container-fluid movie-app'>
       <div className='row d-flex align-items-center mt-4 mb-4'>
-        <MovieListHeading heading='Movies' />
+        <MovieListHeading />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
 
@@ -86,8 +74,8 @@ const App = () => {
           favoriteComponent={AddFavorites}
         />
       </div>
-      <div className='row d-flex align-items-center'>
-        <MovieListHeading heading='Watchlist' />
+      <div className='row d-flex align-items-center watchlist'>
+        <h1>Watchlist</h1>
       </div>
       <div className='row'>
         <MovieList

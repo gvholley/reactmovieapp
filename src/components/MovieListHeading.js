@@ -1,9 +1,10 @@
 import React from 'react';
+import logo from './wllogo.png';
 
 const MovieListHeading = (props) => {
   return(
-    <div className='col'>
-      <h1>{props.heading}</h1>
+    <div className='col logoimage'>
+      <img src={logo} alt="Logo" />
     </div>
     )
 }
