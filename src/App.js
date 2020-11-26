@@ -13,7 +13,7 @@ const App = () => {
   const [favorites, setFavorites] = useState([]);
   const [searchValue, setSearchValue] = useState('');
 
-//Moved useEffect to include API variables intead of just search
+//Moved useEffect here from search
   useEffect(() => {
     const getMovieRequest = async (searchValue) => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=c5171cf5`
