@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js add gh-pages
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js start
 
 PATH: 
   ./bin:./node_modules/.bin:/Users/gvholley/.pyenv/bin:/Users/gvholley/.rbenv/shims:/Users/gvholley/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/gvholley/code/gvholley/reactmovieapp/package.json: Unexpected token } in JSON at position 422
+  SyntaxError: /Users/gvholley/code/gvholley/reactmovieapp/package.json: Unexpected token < in JSON at position 359
       at JSON.parse (<anonymous>)
       at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -35,7 +35,11 @@ npm manifest:
       "react-dom": "^17.0.1",
       "react-scripts": "4.0.0",
       "web-vitals": "^0.2.4",
-      "homepage": "https://gvholley.github.io/reactmovieapp/",
+  <<<<<<< HEAD
+      "homepage": "https://gvholley.github.io/reactmovieapp/"
+  =======
+      "homepage": "https://gvholley.github.io/reactmovieapp"
+  >>>>>>> d15f57f25d17acc2f60b02b849a691d7a8544792
     },
     "scripts": {
       "predeploy": "npm run build",
