@@ -11,7 +11,7 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4",
-    "homepage": "https://gvholley.github.io/reactmovieapp"
+    "homepage": "https://gvholley.github.io/reactmovieapp/"
   },
   "scripts": {
     "predeploy": "npm run build",
